@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './main.scss';
+import './components/global/global.scss';
 
 class App extends React.Component {
     render() {
