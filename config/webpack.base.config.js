@@ -36,7 +36,15 @@ module.exports = env => {
                         use: [
                             PLATFORM === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
                             'css-loader',
-                            'sass-loader'
+                            'sass-loader',
+                            {
+                                loader: 'sass-resources-loader',
+                                options: {
+                                    resources: [
+                                        path.resolve(__dirname, './../src/components/global/scss/global.scss')
+                                    ],
+                                },
+                            },
                         ]
                     }
                 ]
